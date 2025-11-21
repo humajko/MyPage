@@ -1,6 +1,152 @@
 <mvc:View controllerName="mypage.controller.MainPage"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    </Page>
+    xmlns:mvc="sap.ui.core.mvc"    
+    xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:forms="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"	>
+    <m:Page id="page" title="{i18n>title}">
+        <ObjectPageLayout id="ObjectPageLayout"
+		showTitleInHeaderContent="true"
+		upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<expandedHeading>
+					<m:Title text="Object Page Header with Links, Rating Indicator, and Object Status" wrapping="true" />
+				</expandedHeading>
+
+				<snappedHeading>
+					<m:HBox>
+						<m:VBox>
+							<m:Avatar src="images/ja_avatar.jpg" class="sapUiSmallMarginEnd" />
+						</m:VBox>
+
+						<m:VBox>
+							<m:Title text="Object Page Header with Links, Rating Indicator, and Object Status" wrapping="true"/>
+							<m:Label text="Example of an ObjectPage with header facet"/>
+						</m:VBox>
+					</m:HBox>
+				</snappedHeading>
+
+				<expandedContent>
+					<m:Label text="Example of an ObjectPage with header facet"/>
+				</expandedContent>
+
+				<snappedTitleOnMobile>
+					<m:Title text="Object Page Header with Links, Rating Indicator, and Object Status"/>
+				</snappedTitleOnMobile>
+				
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+
+		<headerContent>
+			<m:FlexBox wrap="Wrap" fitContainer="true">
+				<m:Avatar src="{Pictures>/AvatarPicture}" class="sapUiMediumMarginEnd" displaySize="L"/>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title class="sapUiTinyMarginBottom">
+						<m:Link text="Order Details" press="onOrderDetailsPress"/>
+					</m:Title>
+
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Manufacturer:" class="sapUiTinyMarginEnd"/>
+						<m:Text text=" Robotech"/>
+					</m:HBox>
+
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Factory:" class="sapUiTinyMarginEnd"/>
+						<m:Text text=" Florida, OL"/>
+					</m:HBox>
+
+					<m:HBox>
+						<m:Label text="Supplier:" class="sapUiTinyMarginEnd"/>
+						<m:Link text="Robotech (234242343)" press="onExternalApplicationLinkPress"/>
+					</m:HBox>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title text="Contact Information" class="sapUiTinyMarginBottom" />
+
+					<m:HBox class="sapUiTinyMarginBottom">
+						<core:Icon src="sap-icon://account"/>
+						<m:Link text=" John Miller" class="sapUiSmallMarginBegin"/>
+					</m:HBox>
+
+					<m:HBox class="sapUiTinyMarginBottom">
+						<core:Icon src="sap-icon://outgoing-call"/>
+						<m:Link text=" +1 234 5678" class="sapUiSmallMarginBegin"/>
+					</m:HBox>
+
+					<m:HBox>
+						<core:Icon src="sap-icon://email"/>
+						<m:Link text="john.miller@company.com" class="sapUiSmallMarginBegin"/>
+					</m:HBox>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:HBox class="sapUiTinyMarginBottom">
+						<m:Label text="Created By:" class="sapUiSmallMarginEnd"/>
+						<m:Link text="Julie Armstrong" press="handleTitleSelectorPress"/>
+					</m:HBox>
+
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Created On:" class="sapUiSmallMarginEnd"/>
+						<m:Text text=" February 20, 2020"/>
+					</m:HBox>
+
+					<m:HBox class="sapUiTinyMarginBottom">
+						<m:Label text="Changed By:" class="sapUiSmallMarginEnd"/>
+						<m:Link text="John Miller" press="handleTitleSelectorPress"/>
+					</m:HBox>
+
+					<m:HBox renderType="Bare">
+						<m:Label text="Changed On:" class="sapUiSmallMarginEnd"/>
+						<m:Text text=" February 20, 2020"/>
+					</m:HBox>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title  text="Product Description" class="sapUiTinyMarginBottom" />
+					<m:Text  width="320px" text="Top-design high-quality coffee mug - ideal for a comforting moment; Pack: 6; material: Porcelain - durable dishwasher and microwave-safe porcelain that cleans easily and is ideal for everyday service. Comes in two bright colors."/>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title class="sapUiTinyMarginBottom">
+						<m:Link text="Status" press="onAnotherPageLinkPress"/>
+					</m:Title>
+					<m:ObjectStatus text="Delivery" state="Success" class="sapMObjectStatusLarge"/>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title text="Delivery Time" class="sapUiTinyMarginBottom" />
+					<m:ObjectStatus text="12 Days" icon="sap-icon://shipping-status" class="sapMObjectStatusLarge"/>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title text="Assembly Option" class="sapUiTinyMarginBottom" />
+					<m:ObjectStatus text="To Be Selected" state="Error" class="sapMObjectStatusLarge"/>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd">
+					<m:Title text="Price" class="sapUiTinyMarginBottom" />
+					<m:ObjectStatus text="579 EUR" class="sapMObjectStatusLarge"/>
+				</m:VBox>
+
+				<m:VBox class="sapUiMediumMarginEnd sapUiSmallMarginBottom">
+					<m:Title class="sapUiTinyMarginBottom">
+						<m:Link text="Average User Rating" press="onExternalApplicationLinkPress"/>
+					</m:Title>
+					<m:Label text="6 Reviews"/>
+					<m:RatingIndicator value="4" iconSize="16px" />
+					<m:VBox alignItems="End">
+						<m:Text text="4.1 out of 5"/>
+					</m:VBox>
+				</m:VBox>
+			</m:FlexBox>
+		</headerContent>
+
+		<sections>
+			
+		</sections>
+	</ObjectPageLayout>
+    </m:Page>
 </mvc:View>
