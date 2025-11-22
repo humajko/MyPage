@@ -53,7 +53,7 @@
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.suite.ui.commons": {},
+        "sap.ui.suite": {},
         "sap.uxap": {}
       }
     },
