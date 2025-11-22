@@ -1,0 +1,30 @@
+{
+  "sk": {
+    "slovak": {
+      "title": "Slovenčina",
+      "level": "Rodný jazyk"
+    },
+    "english": {
+      "title": "Angličtina",
+      "level": "Plynule"
+    },
+    "german": {
+      "title": "Nemčina",
+      "level": "Základy"
+    }
+  },
+  "en": {
+    "slovak": {
+      "title": "Slovak",
+      "level": "Native"
+    },
+    "english": {
+      "title": "English",
+      "level": "Fluent"
+    },
+    "german": {
+      "title": "German",
+      "level": "Basics"
+    }
+  }
+}

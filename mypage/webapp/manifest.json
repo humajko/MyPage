@@ -23,6 +23,10 @@
       "educationJson": {
         "uri": "model/education.json",
         "type": "JSON"
+      },
+      "languagesJson": {
+        "uri": "model/languages.json",
+        "type": "JSON"
       }
     }
   },
@@ -69,6 +73,10 @@
       "education": {
         "type": "sap.ui.model.json.JSONModel",
         "dataSource": "educationJson"
+      },
+      "languages": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "languagesJson"
       }
     },
     "resources": {

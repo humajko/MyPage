@@ -9,7 +9,10 @@ sap.ui.define([
 
             //Fotka na Avatar
             var oJsonModel = new JSONModel({
-				AvatarPicture: sap.ui.require.toUrl("mypage/images/ja_avatar.jpg")
+				AvatarPicture: sap.ui.require.toUrl("mypage/images/ja_avatar.jpg"),
+                flagSK: sap.ui.require.toUrl("mypage/images/flags/sk.svg"),
+                flagEN: sap.ui.require.toUrl("mypage/images/flags/en.svg"),
+                flagDE: sap.ui.require.toUrl("mypage/images/flags/de.svg"),
 			});
 			this.getView().setModel(oJsonModel, "Pictures");
 

@@ -1,0 +1,33 @@
+<core:FragmentDefinition
+    xmlns="sap.suite.ui.commons"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m">
+    <m:List id="idLanguages" width="50%">
+         <m:ObjectListItem
+        icon="{Pictures>/flagSK}"
+        title="{= ${cfg>/lang} === 'sk'
+                 ? ${languages>/sk/slovak/title}
+                 : ${languages>/en/slovak/title} }"
+        number="{= ${cfg>/lang} === 'sk'
+                 ? ${languages>/sk/slovak/level}
+                 : ${languages>/en/slovak/level} }" />
+
+    <m:ObjectListItem
+        icon="{Pictures>/flagEN}"
+        title="{= ${cfg>/lang} === 'sk'
+                 ? ${languages>/sk/english/title}
+                 : ${languages>/en/english/title} }"
+        number="{= ${cfg>/lang} === 'sk'
+                 ? ${languages>/sk/english/level}
+                 : ${languages>/en/english/level} }" />
+
+    <m:ObjectListItem
+        icon="{Pictures>/flagDE}"
+        title="{= ${cfg>/lang} === 'sk'
+                 ? ${languages>/sk/german/title}
+                 : ${languages>/en/german/title} }"
+        number="{= ${cfg>/lang} === 'sk'
+                 ? ${languages>/sk/german/level}
+                 : ${languages>/en/german/level} }" />
+    </m:List>
+</core:FragmentDefinition>
