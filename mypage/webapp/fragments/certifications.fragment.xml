@@ -1,0 +1,37 @@
+<core:FragmentDefinition
+    xmlns="sap.suite.ui.commons"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m">
+   <m:VBox > 
+   <m:List items="{certifications>/certificates}" headerText="{i18n>tabCertifikations}" width="50%">
+   <m:ObjectListItem 
+      icon="{Pictures>/logoSAP}"
+      title="{certifications>name}"
+      number="{certifications>date}"
+      press=".openURL"
+      type="Active">
+    <m:attributes>
+      <m:ObjectAttribute text="{= ${cfg>/lang} === 'sk' ? ${certifications>description/sk} : ${certifications>description/en} }" />      
+    </m:attributes>
+    </m:ObjectListItem>
+    </m:List>
+
+  <m:List items="{certifications>/workshops}" headerText="{i18n>tabWorkshops}" width="50%">
+   <m:ObjectListItem 
+      icon="{Pictures>/logoSAP}"
+      title="{certifications>name}"
+      number="{certifications>date}"
+      press=".openURL"
+      type="Active">
+    <m:attributes>
+      <m:ObjectAttribute text="{= ${cfg>/lang} === 'sk' ? ${certifications>description/sk} : ${certifications>description/en} }" />      
+    </m:attributes>
+    <m:firstStatus>
+     
+    </m:firstStatus>
+  </m:ObjectListItem>
+</m:List>
+
+</m:VBox>
+
+</core:FragmentDefinition>

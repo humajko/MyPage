@@ -27,6 +27,10 @@
       "languagesJson": {
         "uri": "model/languages.json",
         "type": "JSON"
+      },
+      "certificationsJSON": {
+        "uri": "model/certifications.json",
+        "type": "JSON"
       }
     }
   },
@@ -79,6 +83,10 @@
       "languages": {
         "type": "sap.ui.model.json.JSONModel",
         "dataSource": "languagesJson"
+      },
+      "certifications": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "certificationsJSON"
       }
     },
     "resources": {

@@ -1,0 +1,39 @@
+{
+  "certificates": [
+    {
+      "name": "SAP Certified Associate - Back-End Developer - ABAP Cloud",
+      "issuer": "SAP",
+      "date": "15.11.2024",
+      "description":
+        { 
+            "en" :  "Proctored Exam C_ABAPD_2309",
+            "sk" :  "Certifikácia C_ABAPD_2309, platný do 15.11.2025"
+        },
+      "url": "https://www.credly.com/badges/fd0f3743-f7d4-4f0e-9cd6-b8229708507d"
+    },
+    {
+      "name": "SAP Certified Associate - Back-End Developer - ABAP Cloud",
+      "issuer": "SAP",
+      "date": "29.09.2025",
+      "description":
+        { 
+            "sk" :  "Recertifikácia A_ABAPD_2503, platný do 30.9.2026",
+            "en" :  "Self-paced Assesment A_ABAPD_2503, expires September 30, 2026"
+        },
+      "url": "https://www.credly.com/badges/fd0f3743-f7d4-4f0e-9cd6-b8229708507d"
+    }
+  ],
+  "workshops": [
+    {
+      "name": "SAP Build Code November 2025",
+      "issuer": "UI5con",
+      "date": "20.11.2025",
+      "description":
+        { 
+            "sk" :  "Workshop v dátume 18-20.11.2025.",
+            "en" :  "Workshop during the date 18-20.11.2025."
+        },
+      "url": "https://events.sap.com/build4partners/en_us/home.html"
+    }
+  ]
+}

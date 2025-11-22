@@ -13,6 +13,7 @@ sap.ui.define([
                 flagSK: sap.ui.require.toUrl("mypage/images/flags/sk.svg"),
                 flagEN: sap.ui.require.toUrl("mypage/images/flags/en.svg"),
                 flagDE: sap.ui.require.toUrl("mypage/images/flags/de.svg"),
+                logoSAP: sap.ui.require.toUrl("mypage/images/sap.png"),
 			});
 			this.getView().setModel(oJsonModel, "Pictures");
 
@@ -20,6 +21,11 @@ sap.ui.define([
             const lang = sap.ui.getCore().getConfiguration().getLanguage().toLowerCase();
             const cfgModel = new sap.ui.model.json.JSONModel({ lang: lang.split("-")[0] });
             this.getView().setModel(cfgModel, "cfg");
+        },
+        openURL: function (oEvent) {
+            const sPath = oEvent.getSource().getBindingContextPath();
+            const sUrl = this.getView().getModel("certifications").getContext(sPath).getProperty("url")
+            window.open(sUrl, "_blank");
         }
     });
 });
