@@ -1,0 +1,67 @@
+{
+    "education": [
+        {
+        "school": {
+            "en"   : "Grammar school of Vavrinec Benedikt Nedožerský, Prievidza",
+            "sk"   : "Gymnázium Vavrineca Benedikta Nedožerského, Prievidza"
+             },
+        "faculty": {
+            "en"   : "",
+            "sk"   : ""
+             },
+        "specialization": {
+            "en"   : "",
+            "sk"   : ""
+             },
+        "degree": {
+            "en"   : "",
+            "sk"   : ""
+             },       
+        "date_from": "2009-09-01",
+        "date_to": "2013-06-30",
+        "icon" : "sap-icon://learning-assistant"
+        },
+        {
+        "school": {
+            "en"   : "University of Žilina",
+            "sk"   : "Žilinská univerzita"
+             },
+        "faculty": {
+            "en"   : "Faculty of Management Science and Informatics, Žilina",
+            "sk"   : "Fakulta riadenia a informatik, Žilina"
+             },
+        "specialization": {
+            "en"   : "Computer Engineering",
+            "sk"   : "Počítačové inžinierstvo"
+             },
+        "degree": {
+            "en"   : "Bachelor",
+            "sk"   : "Bakalár"
+             },       
+        "date_from": "2013-09-01",
+        "date_to": "2016-06-30",
+        "icon" : "sap-icon://study-leave"
+        },
+        {
+        "school": {
+            "en"   : "University of Žilina",
+            "sk"   : "Žilinská univerzita"
+             },
+        "faculty": {
+            "en"   : "Faculty of Management Science and Informatics, Žilina",
+            "sk"   : "Fakulta riadenia a informatiky, Žilina"
+             },
+        "specialization": {
+            "en"   : "Computer Engineering",
+            "sk"   : "Počítačové inžinierstvo"
+             },          
+        "degree": {
+            "en"   : "Master's Degree",
+            "sk"   : "Inžinier"
+             },       
+        "date_from": "2016-09-01",
+        "date_to": "2018-06-30",
+        "icon" : "sap-icon://study-leave"
+        }
+    ]
+}

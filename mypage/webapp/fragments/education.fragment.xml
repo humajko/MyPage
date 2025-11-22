@@ -1,0 +1,27 @@
+<core:FragmentDefinition
+    xmlns="sap.suite.ui.commons"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m">
+   <Timeline
+		id="idTimeline"
+		itemFiltering="onItemFiltering"
+		enableDoubleSided="true"
+		groupByType="Year"
+		groupBy="date_to"
+		textHeight="8"
+		sortOldestFirst="false"
+        showHeaderBar="false"
+        alignment="Left"
+        content="{education>/education}">
+        <content>
+			<TimelineItem
+				id="idTemplateItem"
+				dateTime="{education>date_to}"
+				title="{= ${cfg>/lang} === 'sk' ? ${education>school/sk} : ${education>school/en} }"
+				text="{= ${cfg>/lang} === 'sk' ? ${education>faculty/sk} : ${education>faculty/en} } {= ${cfg>/lang} === 'sk' ? ${education>specialization/sk} : ${education>specialization/en} }"
+                status="Success"
+                icon="{education>icon}">
+            </TimelineItem>
+		</content>
+        </Timeline>
+</core:FragmentDefinition>

@@ -7,34 +7,30 @@
     <m:Page id="page" title="{i18n>title}">
         <ObjectPageLayout id="ObjectPageLayout"
 		showTitleInHeaderContent="true"
-		upperCaseAnchorBar="false">
+		upperCaseAnchorBar="false"
+		useIconTabBar="true">
 		<headerTitle>
 			<ObjectPageDynamicHeaderTitle>
 				<expandedHeading>
-					<m:Title text="Object Page Header with Links, Rating Indicator, and Object Status" wrapping="true" />
+					<m:Title text="{i18n>HeaderTop}" wrapping="true" />
 				</expandedHeading>
 
 				<snappedHeading>
 					<m:HBox>
 						<m:VBox>
-							<m:Avatar src="images/ja_avatar.jpg" class="sapUiSmallMarginEnd" />
+							<m:Avatar src="{Pictures>/AvatarPicture}" class="sapUiSmallMarginEnd" />
 						</m:VBox>
 
 						<m:VBox>
-							<m:Title text="Object Page Header with Links, Rating Indicator, and Object Status" wrapping="true"/>
-							<m:Label text="Example of an ObjectPage with header facet"/>
+							<m:Title text="{i18n>HeaderTop}" wrapping="true" />
+							<m:Label text="{i18n>HeaderSubtitle}"/>
 						</m:VBox>
 					</m:HBox>
 				</snappedHeading>
 
 				<expandedContent>
-					<m:Label text="Example of an ObjectPage with header facet"/>
-				</expandedContent>
-
-				<snappedTitleOnMobile>
-					<m:Title text="Object Page Header with Links, Rating Indicator, and Object Status"/>
-				</snappedTitleOnMobile>
-				
+					<m:Label text="{i18n>HeaderSubtitle}"/>
+				</expandedContent>				
 			</ObjectPageDynamicHeaderTitle>
 		</headerTitle>
 
@@ -42,110 +38,73 @@
 			<m:FlexBox wrap="Wrap" fitContainer="true">
 				<m:Avatar src="{Pictures>/AvatarPicture}" class="sapUiMediumMarginEnd" displaySize="L"/>
 
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:Title class="sapUiTinyMarginBottom">
-						<m:Link text="Order Details" press="onOrderDetailsPress"/>
-					</m:Title>
-
-					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-						<m:Label text="Manufacturer:" class="sapUiTinyMarginEnd"/>
-						<m:Text text=" Robotech"/>
-					</m:HBox>
-
-					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-						<m:Label text="Factory:" class="sapUiTinyMarginEnd"/>
-						<m:Text text=" Florida, OL"/>
-					</m:HBox>
-
-					<m:HBox>
-						<m:Label text="Supplier:" class="sapUiTinyMarginEnd"/>
-						<m:Link text="Robotech (234242343)" press="onExternalApplicationLinkPress"/>
-					</m:HBox>
-				</m:VBox>
-
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:Title text="Contact Information" class="sapUiTinyMarginBottom" />
-
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom" width="40%">
+					
+					<m:Title text="{i18n>Contact}" class="sapUiTinyMarginBottom" />
+					
 					<m:HBox class="sapUiTinyMarginBottom">
 						<core:Icon src="sap-icon://account"/>
-						<m:Link text=" John Miller" class="sapUiSmallMarginBegin"/>
+						<m:Link text="Matúš Humaj" class="sapUiSmallMarginBegin" href="{links>/LinkedIn}" target="_blank"/>
 					</m:HBox>
 
 					<m:HBox class="sapUiTinyMarginBottom">
 						<core:Icon src="sap-icon://outgoing-call"/>
-						<m:Link text=" +1 234 5678" class="sapUiSmallMarginBegin"/>
+						<m:Label text="{links>/Phone1} / {links>/Phone2}" class="sapUiSmallMarginBegin"/>
 					</m:HBox>
 
 					<m:HBox>
 						<core:Icon src="sap-icon://email"/>
-						<m:Link text="john.miller@company.com" class="sapUiSmallMarginBegin"/>
+						<m:Link text="{links>/Email}" class="sapUiSmallMarginBegin" href="mailto:{links>/Email}"/>
 					</m:HBox>
 				</m:VBox>
 
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:HBox class="sapUiTinyMarginBottom">
-						<m:Label text="Created By:" class="sapUiSmallMarginEnd"/>
-						<m:Link text="Julie Armstrong" press="handleTitleSelectorPress"/>
-					</m:HBox>
-
-					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
-						<m:Label text="Created On:" class="sapUiSmallMarginEnd"/>
-						<m:Text text=" February 20, 2020"/>
-					</m:HBox>
-
-					<m:HBox class="sapUiTinyMarginBottom">
-						<m:Label text="Changed By:" class="sapUiSmallMarginEnd"/>
-						<m:Link text="John Miller" press="handleTitleSelectorPress"/>
-					</m:HBox>
-
-					<m:HBox renderType="Bare">
-						<m:Label text="Changed On:" class="sapUiSmallMarginEnd"/>
-						<m:Text text=" February 20, 2020"/>
-					</m:HBox>
-				</m:VBox>
-
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:Title  text="Product Description" class="sapUiTinyMarginBottom" />
-					<m:Text  width="320px" text="Top-design high-quality coffee mug - ideal for a comforting moment; Pack: 6; material: Porcelain - durable dishwasher and microwave-safe porcelain that cleans easily and is ideal for everyday service. Comes in two bright colors."/>
-				</m:VBox>
-
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:Title class="sapUiTinyMarginBottom">
-						<m:Link text="Status" press="onAnotherPageLinkPress"/>
-					</m:Title>
-					<m:ObjectStatus text="Delivery" state="Success" class="sapMObjectStatusLarge"/>
-				</m:VBox>
-
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:Title text="Delivery Time" class="sapUiTinyMarginBottom" />
-					<m:ObjectStatus text="12 Days" icon="sap-icon://shipping-status" class="sapMObjectStatusLarge"/>
-				</m:VBox>
-
-				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
-					<m:Title text="Assembly Option" class="sapUiTinyMarginBottom" />
-					<m:ObjectStatus text="To Be Selected" state="Error" class="sapMObjectStatusLarge"/>
-				</m:VBox>
-
-				<m:VBox class="sapUiLargeMarginEnd">
-					<m:Title text="Price" class="sapUiTinyMarginBottom" />
-					<m:ObjectStatus text="579 EUR" class="sapMObjectStatusLarge"/>
-				</m:VBox>
-
-				<m:VBox class="sapUiMediumMarginEnd sapUiSmallMarginBottom">
-					<m:Title class="sapUiTinyMarginBottom">
-						<m:Link text="Average User Rating" press="onExternalApplicationLinkPress"/>
-					</m:Title>
-					<m:Label text="6 Reviews"/>
-					<m:RatingIndicator value="4" iconSize="16px" />
-					<m:VBox alignItems="End">
-						<m:Text text="4.1 out of 5"/>
-					</m:VBox>
-				</m:VBox>
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom" width="40%">
+					<m:Title  text="{i18n>AboutMeShort}" class="sapUiTinyMarginBottom" />
+					<m:Text  text="{i18n>AboutMeShortText}"/>
+				</m:VBox>								
 			</m:FlexBox>
 		</headerContent>
 
 		<sections>
-			
+			<ObjectPageSection titleUppercase="false" title="{i18n>tabEducation}">
+				<subSections>
+					<ObjectPageSubSection titleUppercase="false">
+						 <blocks>
+							<core:Fragment fragmentName="mypage.fragments.education" type="XML"/>	
+						</blocks>	
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>	
+
+			<ObjectPageSection titleUppercase="false" title="{i18n>tabWorkExperience}">
+				<subSections>
+					<ObjectPageSubSection titleUppercase="false">
+						 <blocks>
+							<m:Text text="Your schools, degrees…" />
+						</blocks>	
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>	
+
+			<ObjectPageSection titleUppercase="false" title="{i18n>tabCertifications}">
+				<subSections>
+					<ObjectPageSubSection titleUppercase="false">
+						 <blocks>
+							<m:Text text="Your schools, degrees…" />
+						</blocks>	
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>	
+
+			<ObjectPageSection titleUppercase="false" title="{i18n>tabLanguages}">
+				<subSections>
+					<ObjectPageSubSection titleUppercase="false">
+						 <blocks>
+							<m:Text text="Your schools, degrees…" />
+						</blocks>	
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>			
 		</sections>
 	</ObjectPageLayout>
     </m:Page>
