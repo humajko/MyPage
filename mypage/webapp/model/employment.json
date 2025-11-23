@@ -1,0 +1,34 @@
+{
+  "work": [
+    {
+      "employer": "Datavard s.r.o.",
+      "position": "ABAP Developer",
+      "period": "2017 - 2021",
+      "logoKey": "logoDatavard",
+      "description": {
+        "sk" : "\nVývoj vlastných BW/ERP analytických toolov\nTechnológie: ABAP, ABAP OO, Dynpro, RestAPI ",
+        "en" : "\nDevelopment of custom BW/ERP analytical tools\nTechnologies: ABAP, ABAP OO, Dynpro, RestAPI "
+      } 
+    },
+    {
+      "employer": "Accenture a.s.",
+      "position": "Software Engineer",
+      "period": "2021 – 2023",
+      "logoKey": "logoAccenture",
+      "description": {
+        "sk" : "\nVývoj a podpora zákazníkovi na ECC systéme v medzinárodnom tíme\nZákazník: BASF gmbH\nModuly: MM Master Data.\nTechnológie: ABAP, ABAP OO, Dynpro, OData, Workflows",
+        "en" : "\nDevelopment and support for the customer on ECC system in an international team\nCustomer: BASF gmbH\nModules: MM Master Data.\nTechnologies: ABAP, ABAP OO, Dynpro, OData, Workflows"
+      } 
+    },
+    {
+      "employer": "Neoxx a.s.",
+      "position": "Experienced SAP ABAP Programmer",
+      "period": "2023 – Present",
+      "logoKey": "logoNeoxx",
+      "description": {
+        "sk" : "\nVývoj a podpora slovenským/českým zákazníkom na ECC a S/4HANA (Public, Private Edition) systémoch\nZákazníci: ARRIVA Slovakia a.s., SEPS a.s., JAVYS a.s., Transpetrol a.s.\nModuly: PM/CS, FI, CO, SD, MM.\nTechnológie: ABAP/ABAP Cloud, Fiori UI5 (Freestyle/RAP), OData, CDS Views, Integration Suite",
+        "en" : "\nDevelopment and support for Slovak/Czech customers on ECC and S/4HANA (Public, Private Edition) systems\nCustomers: ARRIVA Slovakia a.s., SEPS a.s., JAVYS a.s., Transpetrol a.s.\nModules: PM/CS, FI, CO, SD, MM.\nTechnologies: ABAP/ABAP Cloud, Fiori UI5 (Freestyle/RAP), OData, CDS Views, Integration Suite"
+      } 
+    }
+  ]
+}

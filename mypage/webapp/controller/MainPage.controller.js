@@ -14,6 +14,9 @@ sap.ui.define([
                 flagEN: sap.ui.require.toUrl("mypage/images/flags/en.svg"),
                 flagDE: sap.ui.require.toUrl("mypage/images/flags/de.svg"),
                 logoSAP: sap.ui.require.toUrl("mypage/images/sap.png"),
+                logoDatavard: sap.ui.require.toUrl("mypage/images/datavard.png"),
+                logoAccenture: sap.ui.require.toUrl("mypage/images/accenture.png"),
+                logoNeoxx: sap.ui.require.toUrl("mypage/images/neoxx.png")
 			});
 			this.getView().setModel(oJsonModel, "Pictures");
 
@@ -26,6 +29,9 @@ sap.ui.define([
             const sPath = oEvent.getSource().getBindingContextPath();
             const sUrl = this.getView().getModel("certifications").getContext(sPath).getProperty("url")
             window.open(sUrl, "_blank");
+        },
+        resolveEmployerLogo(sLogoKey) {
+            return this.getView().getModel("Pictures").getProperty("/" + sLogoKey);
         }
     });
 });

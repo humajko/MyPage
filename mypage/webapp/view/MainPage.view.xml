@@ -80,7 +80,7 @@
 				<subSections>
 					<ObjectPageSubSection titleUppercase="false">
 						 <blocks>
-							<m:Text text="Your schools, degrees…" />
+							<core:Fragment fragmentName="mypage.fragments.employment" type="XML"/>
 						</blocks>	
 					</ObjectPageSubSection>
 				</subSections>

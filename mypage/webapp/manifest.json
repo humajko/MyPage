@@ -31,6 +31,10 @@
       "certificationsJSON": {
         "uri": "model/certifications.json",
         "type": "JSON"
+      },
+      "employmentJSON": {
+        "uri": "model/employment.json",
+        "type": "JSON"
       }
     }
   },
@@ -87,6 +91,10 @@
       "certifications": {
         "type": "sap.ui.model.json.JSONModel",
         "dataSource": "certificationsJSON"
+      },
+      "employment": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "employmentJSON"
       }
     },
     "resources": {

@@ -1,0 +1,31 @@
+<core:FragmentDefinition
+    xmlns="sap.suite.ui.commons"
+	xmlns:core="sap.ui.core"
+	xmlns:m="sap.m">
+<m:List id="idEmployment" items="{employment>/work}"> 
+     <m:CustomListItem>
+    <m:HBox justifyContent="SpaceBetween" alignItems="Start" width="100%">
+      <!-- Left: image -->
+      <m:Avatar
+        src="{
+            parts : ['employment>logoKey'],
+            formatter: '.resolveEmployerLogo'
+            }"
+        size="L"                
+        shape="Square"         
+        imageFitType="Contain"  
+        class="sapUiSmallMarginEnd" />
+
+      <!-- Right: text block -->
+      <m:VBox width="100%">
+        <m:Title text="{employment>employer}" level="H5"/>
+        <m:Text text="{employment>position}" />
+        <m:Text text="{employment>period}" />
+        <m:Text
+          wrapping="true"
+          text="{= ${cfg>/lang}==='sk' ? ${employment>description/sk} : ${employment>description/en} }" />
+      </m:VBox>
+    </m:HBox>
+  </m:CustomListItem>
+</m:List>
+</core:FragmentDefinition>
